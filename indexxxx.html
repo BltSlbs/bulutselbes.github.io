@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BodyRoom</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: red;
+            text-shadow: 2px 2px 5px black;
+            margin: 0;
+        }
+
+        .upload-container {
+            margin: 20px 0;
+        }
+
+        .upload-label {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: #1a1a1a;
+            border: 2px solid red;
+            color: red;
+            font-size: 3em;
+            text-align: center;
+            line-height: 150px;
+            cursor: pointer;
+            box-shadow: 0 0 10px red;
+            position: relative;
+        }
+
+        .upload-label .plus-sign {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .upload-input {
+            display: none;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .photo {
+            background-color: #1a1a1a;
+            border: 2px solid red;
+            padding: 10px;
+            max-width: 300px;
+            text-align: center;
+            box-shadow: 0 0 10px red;
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .photo p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            color: #cccccc;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .status.dead::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .status.alive::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .price-box {
+            background-color: #333;
+            padding: 5px;
+            border: 2px solid red;
+            display: inline-block;
+            color: white;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BodyRoom</h1>
+    </header>
+    <div class="upload-container">
+        <label for="upload" class="upload-label">
+            <span class="plus-sign">+</span>
+            <input type="file" id="upload" class="upload-input">
+        </label>
+    </div>
+    <main>
+        <section class="gallery">
+            <div class="photo">
+                <img src="Cesetler/1.jpg" alt="Korkunç Fotoğraf 1">
+                <p class="status dead">Dead</p>
+                <p class="price-box">Buy for 3.25₿</p>
+            </div>
+            <div class="photo">
+                <img src="Cesetler/2.jpg" alt="Korkunç Fotoğraf 2">
+                <p class="status alive">Alive</p>
+                <p class="price-box">Buy for: 3.87₿</p>
+            </div>
+            <div class="photo">
+                <img src="Cesetler/3.jpg" alt="Korkunç Fotoğraf 3">
+                <p class="status alive">Alive</p>
+                <p class="price-box">Buy for: 6.78₿</p>
+            </div>
+            <div class="photo">
+                <img src="Cesetler/4.jpg" alt="Korkunç Fotoğraf 4">
+                <p class="status dead">Dead</p>
+                <p class="price-box" style="text-decoration: line-through;">Buy for: 2.20₿</p>
+            </div>
+            <div class="photo">
+                <img src="Cesetler/5.jpg" alt="Korkunç Fotoğraf 5">
+                <p class="status dead">Dead</p>
+                <p class="price-box" style="text-decoration: line-through;">Buy for: 2.50₿</p>
+            </div>
+            <div class="photo">
+                <img src="Cesetler/6.jpg" alt="Korkunç Fotoğraf 6">
+                <p class="status alive">Alive</p>
+                <p class="price-box">Buy for: 3.27₿</p>
+            </div>
+            <div class="photo">
+                <img src="Cesetler/7.jpg" alt="Korkunç Fotoğraf 7">
+                <p class="status dead">Dead</p>
+                <p class="price-box">Buy for: 1.60₿</p>
+            </div>
+            <div class="photo">
+                <img src="Cesetler/8.jpg" alt="Korkunç Fotoğraf 8">
+                <p class="status dead">Dead</p>
+                <p class="price-box" style="text-decoration: line-through;">Buy for: 1.30₿</p>
+            </div>
+            <div class="photo">
+                <img src="Cesetler/9.jpg" alt="Korkunç Fotoğraf 9">
+                <p class="status alive">Alive</p>
+                <p class="price-box">Buy for: 3.17₿</p>
+            </div>
+            <div class="photo">
+                <img src="Cesetler/10.jpg" alt="Korkunç Fotoğraf 10">
+                <p class="status alive">Alive</p>
+                <p class="price-box">Buy for: 3.54₿</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
